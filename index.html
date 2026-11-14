@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather + Movie Search</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Weather &amp; Movie Search</h1>
+    <nav class="tabs" role="tablist">
+      <button class="tab active" role="tab" data-target="weather-app" aria-selected="true">Weather</button>
+      <button class="tab" role="tab" data-target="movie-app" aria-selected="false">Movies</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Weather App -->
+    <section id="weather-app" class="panel active">
+      <form id="weather-form" class="search-form">
+        <input id="city-input" type="text" placeholder="Enter a city name (e.g. Delhi)" aria-label="City name" required />
+        <button type="submit">Search</button>
+      </form>
+      <div id="weather-status" class="status" aria-live="polite"></div>
+      <div id="weather-result" class="card-grid">
+        <div class="weather-placeholder">
+          <div class="placeholder-icon">🌤️</div>
+           <h2>Weather at a glance</h2>
+           <p>Search for a city to discover its current weather.</p>
+         </div>
+      </div>
+
+    </section>
+
+   <!-- Movie Search App -->
+<section id="movie-app" class="panel">
+  <form id="movie-form" class="search-form">
+    <input id="movie-input" type="text" placeholder="Search movies (e.g. Inception)" aria-label="Movie title" required />
+    <button type="submit">Search</button>
+  </form>
+
+  <div id="movie-status" class="status" aria-live="polite"></div>
+
+  <div id="movie-result" class="movie-placeholder">
+    <div class="placeholder-icon">🎬</div>
+    <h2>Lights, Camera, Action!</h2>
+    <p>Search for a movie to explore its details, ratings and posters.</p>
+  </div>
+</section>
+  </main>
+
+  <footer>Weather data by Open-Meteo &middot; Movie data by OMDb</footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
